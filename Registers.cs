@@ -98,5 +98,18 @@ namespace Arch
             byte value = this.getValue(register);
             this.setValue(register, --value);
         }
+        public void MOV(string registerFrom, string registerTo) 
+        {
+            byte value = this.getValue(registerFrom );
+            this.setValue(registerTo, value);
+        }
+        public void XCHG(string registerOne, string registerTwo) 
+        {
+            byte valueOne = this.getValue(registerOne );
+            byte valueTwo = this.getValue( registerTwo );
+            this.setValue(registerOne, valueTwo);
+            this.setValue(registerTwo, valueOne);
+        }
+
     }
 }
