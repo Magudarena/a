@@ -1,0 +1,14 @@
+C:\Users\bfe2f\source\repos\Arch\bin\Debug\net6.0\Arch.exe
+C:\Users\bfe2f\source\repos\Arch\bin\Debug\net6.0\Arch.deps.json
+C:\Users\bfe2f\source\repos\Arch\bin\Debug\net6.0\Arch.runtimeconfig.json
+C:\Users\bfe2f\source\repos\Arch\bin\Debug\net6.0\Arch.dll
+C:\Users\bfe2f\source\repos\Arch\bin\Debug\net6.0\Arch.pdb
+C:\Users\bfe2f\source\repos\Arch\obj\Debug\net6.0\Arch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bfe2f\source\repos\Arch\obj\Debug\net6.0\Arch.AssemblyInfoInputs.cache
+C:\Users\bfe2f\source\repos\Arch\obj\Debug\net6.0\Arch.AssemblyInfo.cs
+C:\Users\bfe2f\source\repos\Arch\obj\Debug\net6.0\Arch.csproj.CoreCompileInputs.cache
+C:\Users\bfe2f\source\repos\Arch\obj\Debug\net6.0\Arch.dll
+C:\Users\bfe2f\source\repos\Arch\obj\Debug\net6.0\refint\Arch.dll
+C:\Users\bfe2f\source\repos\Arch\obj\Debug\net6.0\Arch.pdb
+C:\Users\bfe2f\source\repos\Arch\obj\Debug\net6.0\Arch.genruntimeconfig.cache
+C:\Users\bfe2f\source\repos\Arch\obj\Debug\net6.0\ref\Arch.dll
