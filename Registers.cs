@@ -8,16 +8,17 @@ namespace Arch
 {
     internal class Registers
     {
-        public byte AH {  get; set; }
-        public byte AL {  get; set; }
-        public byte BH { get; set; }
-        public byte BL { get; set; }
-        public byte CH { get; set; }
-        public byte CL { get; set; }
-        public byte DH { get; set; }
-        public byte DL { get; set; }
+        private byte AH;
+        private byte AL;
+        private byte BH;
+        private byte BL;
+        private byte CH;
+        private byte CL;
+        private byte DH;
+        private byte DL;
 
-        public Registers() {
+        public Registers() 
+        {
             this.AH = 0;
             this.AL = 0;
             this.BH = 0;
@@ -28,7 +29,8 @@ namespace Arch
             this.DL = 0;
         }
 
-        public byte getValue(string register) {
+        public byte getValue(string register) 
+        {
             switch (register)
             {
                 case "AL":
@@ -51,7 +53,8 @@ namespace Arch
                     throw new InvalidOperationException($"Invalid register {register}");
             }
         }    
-        public void setValue(string register, byte value) {
+        public void setValue(string register, byte value) 
+        {
             switch (register)
             {
                 case "AL":
@@ -83,7 +86,8 @@ namespace Arch
             }
         }
 
-        public string getValueBinary (string register) {
+        public string getValueBinary (string register) 
+        {
             byte value = this.getValue(register);
             return Convert.ToString(value, 2).PadLeft(8, '0');
         }
@@ -110,6 +114,11 @@ namespace Arch
             this.setValue(registerOne, valueTwo);
             this.setValue(registerTwo, valueOne);
         }
-
+        
+        public void NOT(string register) 
+        {
+            byte value = (byte)~this.getValue(register);
+            this.setValue(register, value);
+        }
     }
 }
