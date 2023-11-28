@@ -70,6 +70,22 @@
                             registerTwo = command[2];
                             registers.XOR(registerOne, registerTwo);
                             break;
+                        case "MUL":
+                            register = command[1];
+                            registers.MUL(register);
+                            break;
+                        case "IMUL":
+                            register = command[1];
+                            registers.IMUL(register);
+                            break;
+                        case "DIV":
+                            register = command[1];
+                            registers.DIV(register);
+                            break;
+                        case "IDIV":
+                            register = command[1];
+                            registers.IDIV(register);
+                            break;
 
                         default:
                             Console.WriteLine("Invalid command");

@@ -158,6 +158,40 @@ namespace Arch
             byte valueTwo = this.getValue(registerTwo);
             this.setValue(registerOne, (byte)(valueOne ^ valueTwo));
         }
+        public void MUL(string register)
+        {
+            byte valueOne = this.getValue(register);
+            byte valueAL = this.AL;
+            int result = valueOne * valueAL;
+            byte newValueAH = (byte)(result & 0xFF);
+            byte newValueAL = (byte)(result >> 8);
+            this.AH = newValueAH; 
+            this.AL = newValueAL;
+        }
+        public void IMUL(string register)
+        {
+            sbyte valueOne = (sbyte)this.getValue(register);
+            sbyte valueAL = (sbyte)this.AL;
+            int result = valueOne * valueAL;
+            byte newValueAH = (byte)(result & 0xFF);
+            byte newValueAL = (byte)(result >> 8);
+            this.AH = newValueAH; 
+            this.AL = newValueAL;
+        }
+        public void DIV(string register)
+        {
+            byte divider = this.getValue(register);
+            int dividant = this.AL;
+            this.AL = (byte)(dividant / divider);
+            this.AH = (byte)(dividant % divider);
+        }
+        public void IDIV(string register)
+        {
+            sbyte divider = (sbyte)this.getValue(register);
+            int dividant = (sbyte)this.AL;
+            this.AL = (byte)(dividant / divider);
+            this.AH = (byte)(dividant % divider);
+        }
 
     }
 }
