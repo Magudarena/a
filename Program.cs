@@ -13,15 +13,14 @@
                 {
                     switch (command[0].ToUpper())
                     {
-                        /*                    case "GET":
-                                                string register = command[1];
-                                                Console.WriteLine(registers.getValueBinary(register));
-                                                break;
-                                            case "GETALL":
-                                                printRegisters(registers);
-                                                break;*/
-                        case "INC":
+                        case "SET":
                             string register = command[1];
+                            byte value = Byte.Parse(command[2]);
+                            registers.setValue(register, value);
+                            break;
+                            
+                        case "INC":
+                            register = command[1];
                             registers.INC(register);
                             break;
                         case "DEC":
@@ -42,6 +41,36 @@
                             register = command[1];
                             registers.NOT(register);
                             break;
+                        case "ADD":
+                            registerOne = command[1];
+                            registerTwo = command[2];
+                            registers.ADD(registerOne, registerTwo);
+                            break;
+                        case "SUB":
+                            registerOne = command[1];
+                            registerTwo = command[2];
+                            registers.SUB(registerOne, registerTwo);
+                            break;
+                        case "NEG":
+                            register = command[1];
+                            registers.NEG(register);
+                            break;
+                        case "AND":
+                            registerOne = command[1];
+                            registerTwo = command[2];
+                            registers.AND(registerOne, registerTwo);
+                            break;
+                        case "OR":
+                            registerOne = command[1];
+                            registerTwo = command[2];
+                            registers.OR(registerOne, registerTwo);
+                            break;
+                        case "XOR":
+                            registerOne = command[1];
+                            registerTwo = command[2];
+                            registers.XOR(registerOne, registerTwo);
+                            break;
+
                         default:
                             Console.WriteLine("Invalid command");
                             break;

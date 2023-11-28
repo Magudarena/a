@@ -120,5 +120,44 @@ namespace Arch
             byte value = (byte)~this.getValue(register);
             this.setValue(register, value);
         }
+
+        public void ADD(string registerOne, string registerTwo)
+        {
+            byte valueOne = this.getValue(registerOne);
+            byte valueTwo = this.getValue(registerTwo);
+            this.setValue(registerOne, (byte)(valueOne + valueTwo));
+        }
+        public void SUB(string registerOne, string registerTwo)
+        {
+            byte valueOne = this.getValue(registerOne);
+            byte valueTwo = this.getValue(registerTwo);
+            this.setValue(registerOne, (byte)(valueOne - valueTwo));
+        }
+        public void NEG(string register)
+        {
+            sbyte zero = (sbyte)0;
+            sbyte value = (sbyte)this.getValue(register);
+            sbyte newValue = (sbyte)(zero - value);
+            this.setValue(register, (byte)newValue);
+        }
+        public void AND(string registerOne, string registerTwo)
+        {
+            byte valueOne = this.getValue(registerOne);
+            byte valueTwo = this.getValue(registerTwo);
+            this.setValue(registerOne, (byte)(valueOne & valueTwo));
+        }
+        public void OR(string registerOne, string registerTwo)
+        {
+            byte valueOne = this.getValue(registerOne);
+            byte valueTwo = this.getValue(registerTwo);
+            this.setValue(registerOne, (byte)(valueOne | valueTwo));
+        }
+        public void XOR(string registerOne, string registerTwo)
+        {
+            byte valueOne = this.getValue(registerOne);
+            byte valueTwo = this.getValue(registerTwo);
+            this.setValue(registerOne, (byte)(valueOne ^ valueTwo));
+        }
+
     }
 }
