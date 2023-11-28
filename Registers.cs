@@ -83,11 +83,20 @@ namespace Arch
             }
         }
 
-
-
         public string getValueBinary (string register) {
             byte value = this.getValue(register);
             return Convert.ToString(value, 2).PadLeft(8, '0');
+        }
+
+        public void INC (string register)
+        {
+            byte value = this.getValue(register);
+            this.setValue(register, ++value);
+        }
+        public void DEC (string register)
+        {
+            byte value = this.getValue(register);
+            this.setValue(register, --value);
         }
     }
 }
